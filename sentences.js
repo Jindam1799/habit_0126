@@ -1,0 +1,588 @@
+const sentenceData = {
+  week1: [
+    // 1번
+    {
+      id: 'sentence1',
+      level: 1,
+      isFinal: false,
+      korean: '디저트를 준다.',
+      chinese: {
+        hanzi: ['送', '甜点'],
+        pinyin: ['sòng', 'tiándiǎn'],
+      },
+    },
+    {
+      id: 'sentence1',
+      level: 2,
+      isFinal: false,
+      korean: '디저트를 무료로 준다.',
+      chinese: {
+        hanzi: ['免费', '送', '甜点'],
+        pinyin: ['miǎnfèi', 'sòng', 'tiándiǎn'],
+      },
+    },
+    {
+      id: 'sentence1',
+      level: 3,
+      isFinal: false,
+      korean: '오늘 디저트를 무료로 준대.',
+      chinese: {
+        hanzi: ['今天', '免费', '送', '甜点'],
+        pinyin: ['jīntiān', 'miǎnfèi', 'sòng', 'tiándiǎn'],
+      },
+    },
+    {
+      id: 'sentence1',
+      level: 4,
+      isFinal: false,
+      korean: '그 식당은 오늘 디저트를 무료로 준대.',
+      chinese: {
+        hanzi: ['那', '家', '餐厅', '今天', '免费', '送', '甜点'],
+        pinyin: [
+          'nà',
+          'jiā',
+          'cāntīng',
+          'jīntiān',
+          'miǎnfèi',
+          'sòng',
+          'tiándiǎn',
+        ],
+      },
+    },
+    {
+      id: 'sentence1',
+      level: 5,
+      isFinal: true,
+      korean: 'A: 듣자하니 그 식당이 오늘 디저트를 무료로 준대.',
+      chinese: {
+        hanzi: ['听说', '那', '家', '餐厅', '今天', '免费', '送', '甜点'],
+        pinyin: [
+          'tīng shuō',
+          'nà',
+          'jiā',
+          'cāntīng',
+          'jīntiān',
+          'miǎnfèi',
+          'sòng',
+          'tiándiǎn',
+        ],
+      },
+    },
+    {
+      id: 'sentence1',
+      level: 6,
+      isFinal: false,
+      korean: '한번 보다(좀 보다)',
+      chinese: {
+        hanzi: ['看看'],
+        pinyin: ['kànkan'],
+      },
+    },
+    {
+      id: 'sentence1',
+      level: 7,
+      isFinal: false,
+      korean: '한번 보다',
+      chinese: {
+        hanzi: ['看看', '吧'],
+        pinyin: ['kànkan', 'ba'],
+      },
+    },
+    {
+      id: 'sentence1',
+      level: 8,
+      isFinal: false,
+      korean: '한번 보러 가자.',
+      chinese: {
+        hanzi: ['去', '看看', '吧'],
+        pinyin: ['qù', 'kànkan', 'ba'],
+      },
+    },
+    {
+      id: 'sentence1',
+      level: 9,
+      isFinal: false,
+      korean: '퇴근 후에 한번 보러 가자.',
+      chinese: {
+        hanzi: ['下班', '后', '去', '看看', '吧'],
+        pinyin: ['xiàbān', 'hòu', 'qù', 'kànkan', 'ba'],
+      },
+    },
+    {
+      id: 'sentence1',
+      level: 10,
+      isFinal: false,
+      korean: '우리 퇴근 후에 한번 보러 가자.',
+      chinese: {
+        hanzi: ['我们', '下班', '后', '去', '看看', '吧'],
+        pinyin: ['wǒmen', 'xiàbān', 'hòu', 'qù', 'kànkan', 'ba'],
+      },
+    },
+    {
+      id: 'sentence1',
+      level: 11,
+      isFinal: false,
+      korean: '그럼 우리 퇴근 후에 한번 보러 가자.',
+      chinese: {
+        hanzi: ['那', '我们', '下班', '后', '去', '看看', '吧'],
+        pinyin: ['nà', 'wǒmen', 'xiàbān', 'hòu', 'qù', 'kànkan', 'ba'],
+      },
+    },
+    {
+      id: 'sentence1',
+      level: 12,
+      isFinal: true,
+      korean: 'B: 진짜야? 그럼 우리 퇴근 후에 한번 보러 가자.',
+      chinese: {
+        hanzi: ['真的', '假的', '那', '我们', '下班', '后', '去', '看看', '吧'],
+        pinyin: [
+          'zhen de',
+          'jia de',
+          'nà',
+          'wǒmen',
+          'xiàbān',
+          'hòu',
+          'qù',
+          'kànkan',
+          'ba',
+        ],
+      },
+    },
+
+    // 2번
+    {
+      id: 'sentence2',
+      level: 1,
+      isFinal: false,
+      korean: '새 직장을 찾았다.',
+      chinese: {
+        hanzi: ['找到', '新', '工作'],
+        pinyin: ['zhǎodào', 'xīn', 'gōngzuò'],
+      },
+    },
+    {
+      id: 'sentence2',
+      level: 2,
+      isFinal: false,
+      korean: '이미 새 직장을 찾았다.',
+      chinese: {
+        hanzi: ['已经', '找到', '新', '工作', '了'],
+        pinyin: ['yǐjing', 'zhǎodào', 'xīn', 'gōngzuò', 'le'],
+      },
+    },
+    {
+      id: 'sentence2',
+      level: 3,
+      isFinal: false,
+      korean: '그는 이미 새 직장을 찾았다.',
+      chinese: {
+        hanzi: ['他', '已经', '找到', '新', '工作', '了'],
+        pinyin: ['tā', 'yǐjing', 'zhǎodào', 'xīn', 'gōngzuò', 'le'],
+      },
+    },
+    {
+      id: 'sentence2',
+      level: 4,
+      isFinal: true,
+      korean: 'A: 듣자 하니 그는 이미 새 직장을 찾았다.',
+      chinese: {
+        hanzi: ['听说', '他', '已经', '找到', '新', '工作', '了'],
+        pinyin: ['tīngshuō', 'tā', 'yǐjing', 'zhǎodào', 'xīn', 'gōngzuò', 'le'],
+      },
+    },
+    {
+      id: 'sentence2',
+      level: 5,
+      isFinal: false,
+      korean: '찾았어.',
+      chinese: {
+        hanzi: ['找到', '了'],
+        pinyin: ['zhǎodào', 'le'],
+      },
+    },
+    {
+      id: 'sentence2',
+      level: 6,
+      isFinal: false,
+      korean: '벌써 찾았어?',
+      chinese: {
+        hanzi: ['就', '找到', '了'],
+        pinyin: ['jiù', 'zhǎodào', 'le'],
+      },
+    },
+    {
+      id: 'sentence2',
+      level: 7,
+      isFinal: false,
+      korean: '이렇게(그렇게) 빨리 벌써 찾았어?',
+      chinese: {
+        hanzi: ['这么', '快', '就', '找到', '了'],
+        pinyin: ['zhème', 'kuài', 'jiù', 'zhǎodào', 'le'],
+      },
+    },
+    {
+      id: 'sentence2',
+      level: 8,
+      isFinal: true,
+      korean: 'B: 그래? 이렇게(그렇게) 빨리 벌써 찾은 거야?',
+      chinese: {
+        hanzi: ['是吗', '这么', '快', '就', '找到', '了'],
+        pinyin: ['shì ma', 'zhème', 'kuài', 'jiù', 'zhǎodào', 'le'],
+      },
+    },
+
+    // 3번
+    {
+      id: 'sentence3',
+      level: 1,
+      isFinal: false,
+      korean: '택시에 있어.',
+      chinese: {
+        hanzi: ['在', '出租车', '上'],
+        pinyin: ['zài', 'chūzūchē', 'shàng'],
+      },
+    },
+    {
+      id: 'sentence3',
+      level: 2,
+      isFinal: false,
+      korean: '택시에 둔 걸 까먹다.',
+      chinese: {
+        hanzi: ['忘', '在', '出租车', '上', '了'],
+        pinyin: ['wàng', 'zài', 'chūzūchē', 'shàng', 'le'],
+      },
+    },
+    {
+      id: 'sentence3',
+      level: 3,
+      isFinal: false,
+      korean: '휴대폰을 택시에 둔 걸 까먹다(까먹고 두고 내렸다)',
+      chinese: {
+        hanzi: ['把', '手机', '忘', '在', '出租车', '上', '了'],
+        pinyin: ['bǎ', 'shǒujī', 'wàng', 'zài', 'chūzūchē', 'shàng', 'le'],
+      },
+    },
+    {
+      id: 'sentence3',
+      level: 4,
+      isFinal: true,
+      korean: 'A: 휴대폰을 택시에 둔 걸 까먹다(까먹고 두고 내렸다)',
+      chinese: {
+        hanzi: ['我', '把', '手机', '忘', '在', '出租车', '上', '了'],
+        pinyin: [
+          'wǒ',
+          'bǎ',
+          'shǒujī',
+          'wàng',
+          'zài',
+          'chūzūchē',
+          'shàng',
+          'le',
+        ],
+      },
+    },
+    {
+      id: 'sentence3',
+      level: 5,
+      isFinal: false,
+      korean: '어떡하지?',
+      chinese: {
+        hanzi: ['怎么办'],
+        pinyin: ['zěnmebàn'],
+      },
+    },
+    {
+      id: 'sentence3',
+      level: 6,
+      isFinal: false,
+      korean: '그럼 어떡하지?',
+      chinese: {
+        hanzi: ['那', '怎么办'],
+        pinyin: ['nà', 'zěnmebàn'],
+      },
+    },
+    {
+      id: 'sentence3',
+      level: 7,
+      isFinal: true,
+      korean: 'B: 아이고! 그럼 어떡하지?',
+      chinese: {
+        hanzi: ['哎呀', '那', '怎么办'],
+        pinyin: ['āiyā', 'nà', 'zěnmebàn'],
+      },
+    },
+    // 4번
+    {
+      id: 'sentence4',
+      level: 1,
+      isFinal: false,
+      korean: '면접 날',
+      chinese: {
+        hanzi: ['面试', '的', '日子'],
+        pinyin: ['miànshì', 'de', 'rìzi'],
+      },
+    },
+    {
+      id: 'sentence4',
+      level: 2,
+      isFinal: false,
+      korean: '오늘은 면접 날이야.',
+      chinese: {
+        hanzi: ['今天', '是', '面试', '的', '日子'],
+        pinyin: ['jīntiān', 'shì', 'miànshì', 'de', 'rìzi'],
+      },
+    },
+    {
+      id: 'sentence4',
+      level: 3,
+      isFinal: false,
+      korean: '오늘이 면접 날인 걸 까먹었어.',
+      chinese: {
+        hanzi: ['忘', '了', '今天', '是', '面试', '的', '日子'],
+        pinyin: ['wàng', 'le', 'jīntiān', 'shì', 'miànshì', 'de', 'rìzi'],
+      },
+    },
+    {
+      id: 'sentence4',
+      level: 4,
+      isFinal: false,
+      korean: '뜻밖에도 오늘이 면접 날인 걸 까먹었어.',
+      chinese: {
+        hanzi: ['居然', '忘', '了', '今天', '是', '面试', '的', '日子'],
+        pinyin: [
+          'jūrán',
+          'wàng',
+          'le',
+          'jīntiān',
+          'shì',
+          'miànshì',
+          'de',
+          'rìzi',
+        ],
+      },
+    },
+    {
+      id: 'sentence4',
+      level: 5,
+      isFinal: true,
+      korean: 'A: 그 사람은 (뜻밖에도) 오늘이 면접 날인 걸 까먹었대.',
+      chinese: {
+        hanzi: ['他', '居然', '忘', '了', '今天', '是', '面试', '的', '日子'],
+        pinyin: [
+          'tā',
+          'jūrán',
+          'wàng',
+          'le',
+          'jīntiān',
+          'shì',
+          'miànshì',
+          'de',
+          'rìzi',
+        ],
+      },
+    },
+    {
+      id: 'sentence4',
+      level: 6,
+      isFinal: false,
+      korean: '중요한 일',
+      chinese: {
+        hanzi: ['重要的事'],
+        pinyin: ['zhòngyào de shì'],
+      },
+    },
+    {
+      id: 'sentence4',
+      level: 7,
+      isFinal: false,
+      korean: '이렇게(그렇게) 중요한 일',
+      chinese: {
+        hanzi: ['这么', '重要', '的', '事'],
+        pinyin: ['zhème', 'zhòngyào', 'de', 'shì'],
+      },
+    },
+    {
+      id: 'sentence4',
+      level: 8,
+      isFinal: false,
+      korean: '이렇게(그렇게) 중요한 일도 잊을 수 있어?',
+      chinese: {
+        hanzi: ['这么', '重要', '的', '事', '也', '能', '忘'],
+        pinyin: ['zhème', 'zhòngyào', 'de', 'shì', 'yě', 'néng', 'wàng'],
+      },
+    },
+    {
+      id: 'sentence4',
+      level: 9,
+      isFinal: true,
+      korean: 'B: 설마? 이렇게(그렇게) 중요한 일도 잊을 수 있어?',
+      chinese: {
+        hanzi: ['不会吧', '这么', '重要', '的', '事', '也', '能', '忘'],
+        pinyin: [
+          'bú huì ba',
+          'zhème',
+          'zhòngyào',
+          'de',
+          'shì',
+          'yě',
+          'néng',
+          'wàng',
+        ],
+      },
+    },
+
+    // 5번
+    {
+      id: 'sentence5',
+      level: 1,
+      isFinal: false,
+      korean: '1등을 하다',
+      chinese: {
+        hanzi: ['拿', '第', '一', '名'],
+        pinyin: ['ná', 'dì', 'yī', 'míng'],
+      },
+    },
+    {
+      id: 'sentence5',
+      level: 2,
+      isFinal: false,
+      korean: '1등을 했다.',
+      chinese: {
+        hanzi: ['拿', '了', '第', '一', '名'],
+        pinyin: ['ná', 'le', 'dì', 'yī', 'míng'],
+      },
+    },
+    {
+      id: 'sentence5',
+      level: 3,
+      isFinal: false,
+      korean: '바로(단번에) 1등을 했다.',
+      chinese: {
+        hanzi: ['就', '拿', '了', '第', '一', '名'],
+        pinyin: ['jiù', 'ná', 'le', 'dì', 'yī', 'míng'],
+      },
+    },
+    {
+      id: 'sentence5',
+      level: 4,
+      isFinal: false,
+      korean: '대회에 참가하자마자 바로 1등을 했어.',
+      chinese: {
+        hanzi: ['参加', '比赛', '就', '拿', '了', '第', '一', '名'],
+        pinyin: ['cānjiā', 'bǐsài', 'jiù', 'ná', 'le', 'dì', 'yī', 'míng'],
+      },
+    },
+    {
+      id: 'sentence5',
+      level: 5,
+      isFinal: false,
+      korean: '처음 대회에 참가하자마자 바로 1등을 했어.',
+      chinese: {
+        hanzi: [
+          '第',
+          '一',
+          '次',
+          '参加',
+          '比赛',
+          '就',
+          '拿',
+          '了',
+          '第',
+          '一',
+          '名',
+        ],
+        pinyin: [
+          'dì',
+          'yī',
+          'cì',
+          'cānjiā',
+          'bǐsài',
+          'jiù',
+          'ná',
+          'le',
+          'dì',
+          'yī',
+          'míng',
+        ],
+      },
+    },
+    {
+      id: 'sentence5',
+      level: 6,
+      isFinal: true,
+      korean: 'A: 처음 대회에 참가하자마자 바로 1등을 했어.',
+      chinese: {
+        hanzi: [
+          '他',
+          '第',
+          '一',
+          '次',
+          '参加',
+          '比赛',
+          '就',
+          '拿',
+          '了',
+          '第',
+          '一',
+          '名',
+        ],
+        pinyin: [
+          'tā',
+          'dì',
+          'yī',
+          'cì',
+          'cānjiā',
+          'bǐsài',
+          'jiù',
+          'ná',
+          'le',
+          'dì',
+          'yī',
+          'míng',
+        ],
+      },
+    },
+    {
+      id: 'sentence5',
+      level: 7,
+      isFinal: false,
+      korean: '쉽지 않은데.',
+      chinese: {
+        hanzi: ['不', '简单'],
+        pinyin: ['bù', 'jiǎndān'],
+      },
+    },
+    {
+      id: 'sentence5',
+      level: 8,
+      isFinal: false,
+      korean: '진짜 쉽지 않은데.',
+      chinese: {
+        hanzi: ['真', '不', '简单'],
+        pinyin: ['zhēn', 'bù', 'jiǎndān'],
+      },
+    },
+    {
+      id: 'sentence5',
+      level: 9,
+      isFinal: false,
+      korean: '대단하다! 진짜 쉽지 않은데.',
+      chinese: {
+        hanzi: ['厉害', '真', '不', '简单'],
+        pinyin: ['lìhai', 'zhēn', 'bù', 'jiǎndān'],
+      },
+    },
+    {
+      id: 'sentence5',
+      level: 10,
+      isFinal: true,
+      korean: 'B: 너무 대단하다! 진짜 쉽지 않은데.',
+      chinese: {
+        hanzi: ['太', '厉害', '了', '真', '不', '简单'],
+        pinyin: ['tài', 'lìhai', 'le', 'zhēn', 'bù', 'jiǎndān'],
+      },
+    },
+  ],
+};
+// 전역 변수로 내보내기
+window.sentenceData = sentenceData;
