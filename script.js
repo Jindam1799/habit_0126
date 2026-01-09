@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let timer = null;
   let timeRemaining = 30;
   let isPreviewShown = false;
+  let gameStartTime = null; // [추가] 게임 시작 시간 기록용
 
   // 1. Week 선택 버튼 생성 (1~4주)
   function createWeekButtons() {
@@ -43,6 +44,9 @@ document.addEventListener('DOMContentLoaded', function () {
     currentWeek = week;
     const data = window.sentenceData[`week${week}`];
     if (!data) return alert('해당 주차의 데이터가 없습니다.');
+
+    // [기능 추가] 주차를 선택하고 게임이 시작되는 시점의 시간 기록
+    gameStartTime = Date.now();
 
     prepareSentences(data);
     document.getElementById('day-selection').classList.add('hidden');
@@ -66,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
     );
   }
 
-  // 4. 현재 단계 로드
+  // 4. 현재 단계 로드 (완성문장 강조 포함)
   function loadSentence() {
     if (currentSentenceIndex >= currentSentences.length) {
       showReviewPopup();
@@ -83,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const sentence = currentLevels[currentLevelIndex];
     koreanSentence.textContent = sentence.korean;
 
+    // 완성문장 디자인 분기
     if (sentence.isFinal) {
       koreanSentence.classList.add('final-sentence');
       sentenceCountSpan.innerHTML = `<span style="font-weight: 800; color: #e65100;">🔥 완성 문장 도전!</span>`;
@@ -176,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   };
 
-  // 8. 타이머 (시간 초과 시 흔들기 애니메이션 후 리셋)
+  // 8. 타이머 (시간 초과 시 화면 흔들기 후 자동 리셋)
   function startTimer() {
     clearInterval(timer);
     timeRemaining = 30;
@@ -187,32 +192,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (timeRemaining <= 0) {
         clearInterval(timer);
-
-        // --- [추가] 시간 초과 시 화면 흔들기 효과 ---
         gameArea.classList.add('shake');
-
-        // 애니메이션이 끝난 후(0.5초 뒤) 클래스 제거 및 리셋
         setTimeout(() => {
           gameArea.classList.remove('shake');
           loadSentence();
         }, 500);
-        // ------------------------------------------
       }
     }, 1000);
   }
 
-  // 9. 기타 기능
-  resetButton.onclick = () => createCards(currentLevels[currentLevelIndex]);
-
-  function updateProgress() {
-    const percent = (currentSentenceIndex / currentSentences.length) * 100;
-    progressBar.style.width = `${percent}%`;
-  }
-
+  // 9. 복습 팝업 (걸린 시간 계산 로직 추가)
   function showReviewPopup() {
     clearInterval(timer);
     gameArea.classList.add('hidden');
     document.getElementById('day-number').textContent = currentWeek;
+
+    // [기능 추가] 걸린 시간 계산 및 표시
+    const elapsedTimeElement = document.getElementById('elapsed-time');
+    if (gameStartTime && elapsedTimeElement) {
+      const endTime = Date.now();
+      const diff = endTime - gameStartTime;
+      const minutes = Math.floor(diff / 60000);
+      const seconds = Math.floor((diff % 60000) / 1000);
+      elapsedTimeElement.textContent = `⏱️ 이번 주차 완료 시간: ${minutes}분 ${seconds}초`;
+    }
+
     const reviewArea = document.getElementById('review-sentences');
     reviewArea.innerHTML = '';
     currentSentences.forEach((set) => {
@@ -235,7 +239,14 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('review-popup').classList.remove('hidden');
   }
 
-  // 10. 초기 시작 설정
+  // 10. 기타 제어 및 초기화
+  resetButton.onclick = () => createCards(currentLevels[currentLevelIndex]);
+
+  function updateProgress() {
+    const percent = (currentSentenceIndex / currentSentences.length) * 100;
+    progressBar.style.width = `${percent}%`;
+  }
+
   document.getElementById('start-game').onclick = () => {
     document.getElementById('intro-popup').classList.add('hidden');
     document.getElementById('day-selection').classList.remove('hidden');
