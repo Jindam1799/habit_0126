@@ -683,3 +683,93 @@ button:active {
   pointer-events: none; /* 클릭 방해 금지 */
   opacity: 1;
 }
+
+/* --- [미리보기 팝업 전용 스타일] --- */
+
+.preview-container {
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+}
+
+#preview-title {
+  color: #e65100;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* 한국어 문장이 들어가는 상자 */
+.preview-box {
+  background-color: #fff8e1;
+  border: 2px dashed #ff9800;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  text-align: left;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* "중국어로 툭! 나오시나요?" 문구 */
+.preview-tagline {
+  color: #d84315;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* 하단 작은 안내문 박스 */
+.preview-instructions {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.7;
+  text-align: left;
+  background: #fdfdfd;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+.preview-instructions p {
+  margin-bottom: 5px !important;
+  font-size: 0.95rem !important;
+}
+
+/* 훈련 시작 버튼 강조 */
+#close-preview.btn-primary {
+  width: 100%;
+  background-color: #ff9800;
+  color: white;
+  height: 55px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 0 #e68a00; /* 입체감 버튼 */
+}
+
+#close-preview.btn-primary:hover {
+  background-color: #f57c00;
+}
+
+#close-preview.btn-primary:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #e68a00;
+}
+
+/* 모바일 대응 */
+@media (max-width: 480px) {
+  .preview-box {
+    font-size: 1rem;
+    padding: 15px;
+  }
+  .preview-tagline {
+    font-size: 1.1rem;
+  }
+}
