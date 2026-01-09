@@ -290,8 +290,11 @@ header:after {
 }
 
 #placed-cards {
-  background-color: white;
+  background-color: white !important;
   border: 2px dotted #ff9800;
+  opacity: 1 !important;
+  position: relative;
+  z-index: 2;
   min-height: 120px;
   display: flex;
   flex-wrap: wrap;
@@ -679,15 +682,4 @@ button:active {
   z-index: 0; /* 콘텐츠보다 뒤로 보냄 */
   pointer-events: none; /* 클릭 방해 금지 */
   opacity: 1;
-}
-
-/* 카드 영역이나 문장 영역이 워터마크를 너무 가리지 않게 투명도 살짝 조정 (선택사항) */
-.sentence-display,
-#placed-cards {
-  background-color: rgba(
-    255,
-    243,
-    224,
-    0.8
-  ) !important; /* 배경색을 살짝 투명하게 하여 워터마크가 비치게 함 */
 }
