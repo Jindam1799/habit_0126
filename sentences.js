@@ -186,8 +186,8 @@ const sentenceData = {
       isFinal: true,
       korean: 'A: 듣자 하니 그는 이미 새 직장을 찾았다.',
       chinese: {
-        hanzi: ['听说', '他', '已经', '找到', '新', '工作了'],
-        pinyin: ['tīngshuō', 'tā', 'yǐjing', 'zhǎodào', 'xīn', 'gōngzuò le'],
+        hanzi: ['听说', '他', '已经', '找到', '新', '工作', '了'],
+        pinyin: ['tīngshuō', 'tā', 'yǐjing', 'zhǎodào', 'xīn', 'gōngzuò, 'le'],
       },
     },
     {
