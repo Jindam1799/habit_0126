@@ -57,7 +57,7 @@ const sentenceData = {
       chinese: {
         hanzi: ['听说', '那', '家', '餐厅', '今天', '免费', '送', '甜点'],
         pinyin: [
-          'tīng shuō',
+          'tīngshuō',
           'nà',
           'jiā',
           'cāntīng',
@@ -166,8 +166,8 @@ const sentenceData = {
       isFinal: false,
       korean: '이미 새 직장을 찾았다.',
       chinese: {
-        hanzi: ['已经', '找到', '新', '工作', '了'],
-        pinyin: ['yǐjing', 'zhǎodào', 'xīn', 'gōngzuò', 'le'],
+        hanzi: ['已经', '找到', '新', '工作了'],
+        pinyin: ['yǐjing', 'zhǎodào', 'xīn', 'gōngzuò le'],
       },
     },
     {
@@ -176,8 +176,8 @@ const sentenceData = {
       isFinal: false,
       korean: '그는 이미 새 직장을 찾았다.',
       chinese: {
-        hanzi: ['他', '已经', '找到', '新', '工作', '了'],
-        pinyin: ['tā', 'yǐjing', 'zhǎodào', 'xīn', 'gōngzuò', 'le'],
+        hanzi: ['他', '已经', '找到', '新', '工作了'],
+        pinyin: ['tā', 'yǐjing', 'zhǎodào', 'xīn', 'gōngzuò le'],
       },
     },
     {
@@ -186,8 +186,8 @@ const sentenceData = {
       isFinal: true,
       korean: 'A: 듣자 하니 그는 이미 새 직장을 찾았다.',
       chinese: {
-        hanzi: ['听说', '他', '已经', '找到', '新', '工作', '了'],
-        pinyin: ['tīngshuō', 'tā', 'yǐjing', 'zhǎodào', 'xīn', 'gōngzuò', 'le'],
+        hanzi: ['听说', '他', '已经', '找到', '新', '工作了'],
+        pinyin: ['tīngshuō', 'tā', 'yǐjing', 'zhǎodào', 'xīn', 'gōngzuò le'],
       },
     },
     {
@@ -248,8 +248,8 @@ const sentenceData = {
       isFinal: false,
       korean: '택시에 둔 걸 까먹다.',
       chinese: {
-        hanzi: ['忘', '在', '出租车', '上', '了'],
-        pinyin: ['wàng', 'zài', 'chūzūchē', 'shàng', 'le'],
+        hanzi: ['忘在', '出租车', '上了'],
+        pinyin: ['wàng zài', 'chūzūchē', 'shàng le'],
       },
     },
     {
@@ -258,15 +258,15 @@ const sentenceData = {
       isFinal: false,
       korean: '휴대폰을 택시에 둔 걸 까먹다(까먹고 두고 내렸다)',
       chinese: {
-        hanzi: ['把', '手机', '忘', '在', '出租车', '上', '了'],
-        pinyin: ['bǎ', 'shǒujī', 'wàng', 'zài', 'chūzūchē', 'shàng', 'le'],
+        hanzi: ['把', '手机', '忘', '在', '出租车', '上了'],
+        pinyin: ['bǎ', 'shǒujī', 'wàng', 'zài', 'chūzūchē', 'shàng le'],
       },
     },
     {
       id: 'sentence3',
       level: 4,
       isFinal: true,
-      korean: 'A: 휴대폰을 택시에 둔 걸 까먹다(까먹고 두고 내렸다)',
+      korean: 'A: 나는 휴대폰을 택시에 둔 걸 까먹다(까먹고 두고 내렸다)',
       chinese: {
         hanzi: ['我', '把', '手机', '忘', '在', '出租车', '上', '了'],
         pinyin: [
@@ -338,8 +338,8 @@ const sentenceData = {
       isFinal: false,
       korean: '오늘이 면접 날인 걸 까먹었어.',
       chinese: {
-        hanzi: ['忘', '了', '今天', '是', '面试', '的', '日子'],
-        pinyin: ['wàng', 'le', 'jīntiān', 'shì', 'miànshì', 'de', 'rìzi'],
+        hanzi: ['忘了', '今天', '是', '面试', '的', '日子'],
+        pinyin: ['wàng le', 'jīntiān', 'shì', 'miànshì', 'de', 'rìzi'],
       },
     },
     {
@@ -448,8 +448,8 @@ const sentenceData = {
       isFinal: false,
       korean: '1등을 했다.',
       chinese: {
-        hanzi: ['拿', '了', '第', '一', '名'],
-        pinyin: ['ná', 'le', 'dì', 'yī', 'míng'],
+        hanzi: ['拿了', '第', '一', '名'],
+        pinyin: ['ná le', 'dì', 'yī', 'míng'],
       },
     },
     {
@@ -480,8 +480,7 @@ const sentenceData = {
       chinese: {
         hanzi: [
           '第',
-          '一',
-          '次',
+          '一次',
           '参加',
           '比赛',
           '就',
@@ -493,8 +492,7 @@ const sentenceData = {
         ],
         pinyin: [
           'dì',
-          'yī',
-          'cì',
+          'yī cì',
           'cānjiā',
           'bǐsài',
           'jiù',
@@ -510,7 +508,7 @@ const sentenceData = {
       id: 'sentence5',
       level: 6,
       isFinal: true,
-      korean: 'A: 처음 대회에 참가하자마자 바로 1등을 했어.',
+      korean: 'A: 걔는 처음 대회에 참가하자마자 바로 1등을 했어.',
       chinese: {
         hanzi: [
           '他',
