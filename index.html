@@ -44,7 +44,7 @@
 
       <div id="intro-popup" class="popup">
         <div class="popup-content">
-          <h2>🧱 중국어덩어리훈련 말버릇편</h2>
+          <h3 class="subtitle-center">🧱 중국어덩어리훈련 말버릇편 🧱</h3>
           <h5 class="subtitle-center">"덩어리로 툭! 말문이 트인다"</h5>
           <br />
           <p>
@@ -68,41 +68,15 @@
           </div>
         </div>
       </div>
-
       <div id="preview-popup" class="popup hidden">
-        <div class="popup-content" style="text-align: center; max-width: 500px">
-          <h2 id="preview-title" style="color: #e65100; margin-bottom: 20px">
-            완성문장 1
-          </h2>
-          <div
-            id="preview-korean-area"
-            style="
-              background-color: #fff8e1;
-              border: 2px dashed #ff9800;
-              padding: 20px;
-              border-radius: 12px;
-              margin-bottom: 20px;
-              text-align: left;
-              line-height: 1.8;
-              font-size: 1.1rem;
-              font-weight: 500;
-            "
-          ></div>
-          <h3 style="color: #d84315; margin-bottom: 15px; font-size: 1.2rem">
-            "이 문장, 중국어로 툭! 나오시나요?"
-          </h3>
-          <div
-            style="
-              font-size: 0.95rem;
-              color: #444;
-              line-height: 1.7;
-              text-align: left;
-              background: #fdfdfd;
-              padding: 15px;
-              border-radius: 8px;
-              border: 1px solid #eee;
-            "
-          >
+        <div class="popup-content preview-container">
+          <h2 id="preview-title">완성문장 1</h2>
+
+          <div id="preview-korean-area" class="preview-box"></div>
+
+          <h3 class="preview-tagline">"이 문장, 중국어로 툭! 나오시나요?"</h3>
+
+          <div class="preview-instructions">
             <p>• 완성될 대화의 한국어 의미를 미리 확인해 보세요.</p>
             <p>• 중국어 표현은 문맥에 따라 번역이 달라질 수 있습니다.</p>
             <p>
@@ -110,18 +84,9 @@
               포인트입니다.
             </p>
           </div>
-          <div class="button-container" style="margin-top: 20px">
-            <button
-              id="close-preview"
-              style="
-                width: 100%;
-                background-color: #ff9800;
-                color: white;
-                height: 50px;
-              "
-            >
-              훈련 시작!
-            </button>
+
+          <div class="button-container">
+            <button id="close-preview" class="btn-primary">훈련 시작!</button>
           </div>
         </div>
       </div>
@@ -155,7 +120,7 @@
       <div id="review-popup" class="popup hidden">
         <div class="popup-content">
           <h3 id="completed-day">Week <span id="day-number"></span> 완료!</h3>
-          <h2>오늘 입에 익힌 대화 문장들</h2>
+          <h2>이번 주에 입에 익힌 대화 문장들</h2>
           <div id="elapsed-time" class="elapsed-time"></div>
           <div id="review-sentences"></div>
           <div class="button-container">
