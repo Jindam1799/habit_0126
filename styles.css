@@ -35,7 +35,7 @@ header {
 }
 
 header h1 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
   color: #e65100; /* 진한 주황색 */
@@ -97,8 +97,9 @@ header:after {
   text-align: center;
 }
 
-.popup-content h2 {
+.popup-content h3 {
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .popup-content h4 {
