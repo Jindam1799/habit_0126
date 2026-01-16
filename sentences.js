@@ -621,7 +621,7 @@ const sentenceData = {
       korean: '(이제) 경기에 참가하지 않는 거야?',
       chinese: {
         hanzi: ['是不是', '不', '参加', '比赛', '了'],
-        pinyin: ['shì', 'bu', 'shì', 'bù', 'cānjiā', 'bǐsài', 'le'],
+        pinyin: ['shì bu shì', 'bù', 'cānjiā', 'bǐsài', 'le'],
       },
     },
     {
@@ -631,7 +631,7 @@ const sentenceData = {
       korean: 'A: 걔는 (이제) 경기에 참가하지 않는 거야?',
       chinese: {
         hanzi: ['他', '是不是', '不', '参加', '比赛', '了'],
-        pinyin: ['tā', 'shì', 'bu', 'shì', 'bù', 'cānjiā', 'bǐsài', 'le'],
+        pinyin: ['tā', 'shì bu shì', 'bù', 'cānjiā', 'bǐsài', 'le'],
       },
     },
     {
@@ -660,8 +660,8 @@ const sentenceData = {
       isFinal: false,
       korean: '이렇게 오랫동안 훈련에 안 나왔다.',
       chinese: {
-        hanzi: ['这么', '久', '没', '来', '训练', '了'],
-        pinyin: ['zhème', 'jiǔ', 'méi', 'lái', 'xùnliàn', 'le'],
+        hanzi: ['这么', '久', '没', '来', '训练了'],
+        pinyin: ['zhème', 'jiǔ', 'méi', 'lái', 'xùnliàn le'],
       },
     },
     {
@@ -680,14 +680,15 @@ const sentenceData = {
       isFinal: false,
       korean: '이미 이렇게 오래 훈련에 안 나왔는데, 분명 그렇지.',
       chinese: {
-        hanzi: ['都', '这么', '久', '没', '来', '训练了', '肯定', '是'],
+        hanzi: ['都', '这么', '久', '没', '来', '训练', '了', '肯定', '是'],
         pinyin: [
           'dōu',
           'zhème',
           'jiǔ',
           'méi',
           'lái',
-          'xùnliàn le',
+          'xùnliàn',
+          'le',
           'kěndìng',
           'shì',
         ],
@@ -708,7 +709,8 @@ const sentenceData = {
           '久',
           '没',
           '来',
-          '训练了',
+          '训练',
+          '了',
           '肯定',
           '是',
         ],
@@ -721,7 +723,8 @@ const sentenceData = {
           'jiǔ',
           'méi',
           'lái',
-          'xùnliàn le',
+          'xùnliàn',
+          'le',
           'kěndìng',
           'shì',
         ],
@@ -893,8 +896,8 @@ const sentenceData = {
       isFinal: false,
       korean: '지금 하는 일을 좋아해?',
       chinese: {
-        hanzi: ['喜', '不', '喜欢', '现在', '的', '工作'],
-        pinyin: ['xǐ', 'bu', 'xǐhuan', 'xiànzài', 'de', 'gōngzuò'],
+        hanzi: ['喜不喜欢', '现在', '的', '工作'],
+        pinyin: ['xǐ bu xǐhuan', 'xiànzài', 'de', 'gōngzuò'],
       },
     },
     {
@@ -913,8 +916,8 @@ const sentenceData = {
       isFinal: false,
       korean: '좋은 점도 있고 나쁜 점도 있어.',
       chinese: {
-        hanzi: ['有好', '有坏'],
-        pinyin: ['yǒu hǎo', 'yǒu huài'],
+        hanzi: ['有好有坏'],
+        pinyin: ['yǒu hǎo yǒu huài'],
       },
     },
     {
@@ -1041,7 +1044,7 @@ const sentenceData = {
       id: 'sentence9',
       level: 10,
       isFinal: true,
-      korean: '이건 말이지…… 요즘 일이 좀 많아서, 나는 시간을 좀 봐야 해.',
+      korean: 'B: 이건 말이지…… 요즘 일이 좀 많아서, 나는 시간을 좀 봐야 해.',
       chinese: {
         hanzi: [
           '这个嘛',
@@ -1154,8 +1157,8 @@ const sentenceData = {
       isFinal: false,
       korean: '시간이 맞다(시간이 된다).',
       chinese: {
-        hanzi: ['时间', '来', '得', '及'],
-        pinyin: ['shíjiān', 'lái', 'de', 'jí'],
+        hanzi: ['时间', '来得及'],
+        pinyin: ['shíjiān', 'lái de jí'],
       },
     },
     {
@@ -1164,8 +1167,8 @@ const sentenceData = {
       isFinal: false,
       korean: '만약 시간이 맞다면……',
       chinese: {
-        hanzi: ['如果', '时间', '来', '得', '及的话'],
-        pinyin: ['rúguǒ', 'shíjiān', 'lái', 'de', 'jí de huà'],
+        hanzi: ['如果', '时间', '来得及', '的话'],
+        pinyin: ['rúguǒ', 'shíjiān', 'lái de jí', 'de huà'],
       },
     },
     {
@@ -1174,16 +1177,15 @@ const sentenceData = {
       isFinal: false,
       korean: '내가 좀 생각해볼게… 만약 시간이 맞다면……',
       chinese: {
-        hanzi: ['让', '我', '想想', '如果', '时间', '来', '得', '及的话'],
+        hanzi: ['让', '我', '想想', '如果', '时间', '来得及', '的话'],
         pinyin: [
           'ràng',
           'wǒ',
           'xiǎngxiang',
           'rúguǒ',
           'shíjiān',
-          'lái',
-          'de',
-          'jí de huà',
+          'lái de jí',
+          'de huà',
         ],
       },
     },
@@ -1193,26 +1195,15 @@ const sentenceData = {
       isFinal: false,
       korean: '내가 좀 생각해볼게… 만약 시간이 맞으면 가능해.',
       chinese: {
-        hanzi: [
-          '让',
-          '我',
-          '想想',
-          '如果',
-          '时间',
-          '来',
-          '得',
-          '及的话',
-          '可以',
-        ],
+        hanzi: ['让', '我', '想想', '如果', '时间', '来得及', '的话', '可以'],
         pinyin: [
           'ràng',
           'wǒ',
           'xiǎngxiang',
           'rúguǒ',
           'shíjiān',
-          'lái',
-          'de',
-          'jí de huà',
+          'lái de jí',
+          'de huà',
           'kěyǐ',
         ],
       },
@@ -1229,9 +1220,8 @@ const sentenceData = {
           '想想',
           '如果',
           '时间',
-          '来',
-          '得',
-          '及的话',
+          '来得及',
+          '的话',
           '应该',
           '可以',
         ],
@@ -1241,9 +1231,8 @@ const sentenceData = {
           'xiǎngxiang',
           'rúguǒ',
           'shíjiān',
-          'lái',
-          'de',
-          'jí de huà',
+          'lái de jí',
+          'de huà',
           'yīnggāi',
           'kěyǐ',
         ],
